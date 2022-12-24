@@ -1,6 +1,6 @@
 <template>
       <b-navbar toggleable="lg" class="navbar" type="dark">
-        <b-navbar-brand class="title" to="/">ToDo List</b-navbar-brand>
+        <b-navbar-brand class="title" to="/">Todo App</b-navbar-brand>
   
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
   
@@ -8,9 +8,9 @@
           <b-navbar-nav class="flex">
             <b-nav-item to="/list">
               <img src="" alt="">
-              Tasks
+              Tasklar
             </b-nav-item>
-            <b-nav-item to="/form">Add new Task</b-nav-item>
+            <b-nav-item to="/form">Yangi task qo'shish</b-nav-item>
           </b-navbar-nav>
         </b-collapse>
       </b-navbar>

@@ -1,7 +1,7 @@
 <template>
       <b-form>
         <b-form-group
-          label="Titulo"
+          label="Sarlavha"
           label-for="subject"
           class="texto"
         >
@@ -9,14 +9,14 @@
             id="subject"
             v-model="formAddTask.subject"
             type="text"
-            placeholder="Ex: lavar carro"
+            placeholder="Sarlavhani kiriting"
             required
             autocomplete="off"
           ></b-form-input>
         </b-form-group>
 
         <b-form-group
-          label="Descrição"
+          label="Qisqacha tavsif"
           label-for="description"
           class="texto"
         >
@@ -24,13 +24,13 @@
             id="description"
             v-model="formAddTask.description"
             type="text"
-            placeholder="Ex: preciso levar o carro para lavar"
+            placeholder="Qisqacha tavsifni kiriting"
             required
             autocomplete="off"
           ></b-form-textarea>
         </b-form-group>
 
-        <b-button type="submit" variant="outline-secondary" @click="saveTask"> Salvar </b-button>
+        <b-button type="submit" variant="outline-secondary" @click="saveTask"> Qo'shish </b-button>
       </b-form>
 </template>
 
@@ -66,7 +66,7 @@ export default {
         let tasks = JSON.parse(localStorage.getItem("tasks"));
         tasks[this.$route.params.index] = this.formAddTask;
         localStorage.setItem("tasks", JSON.stringify(tasks));
-        this.showToast("success", "Sucesso!", "Tarefa atualizada com suceso");
+        this.showToast("success", "Ajoyib", "Task muvaffaqiyatli o'zgartirildi");
         this.$router.push({ name: "list" });
         return;
       }
@@ -74,7 +74,7 @@ export default {
       let tasks = (localStorage.getItem("tasks")) ? JSON.parse(localStorage.getItem("tasks")) : [];
       tasks.push(this.formAddTask);
       localStorage.setItem("tasks", JSON.stringify(tasks));
-      this.showToast("success", "Sucesso!", "Tarefa criada com suceso");
+      this.showToast("success", "Ajoyib!", "Task muvaffaqiyatli yaratildi");
       this.$router.push({ name: "list" });
     }
   }

@@ -4,27 +4,27 @@
         <b-card :title="task.subject" class="mb-2" id="card1">
           <b-card-text>{{ task.description }}</b-card-text>
 
-          <b-button variant="outline-secondary" class="mr-2" @click="edit(index)"> Editar </b-button>
-          <b-button variant="outline-danger" class="mr-2" @click="remove(task, index)"> Excluir </b-button>
+          <b-button variant="outline-secondary" class="mr-2" @click="edit(index)"> O'zgartirish </b-button>
+          <b-button variant="outline-danger" class="mr-2" @click="remove(task, index)"> O'chirish </b-button>
         </b-card>
       </div>
 
-      <b-modal ref="modalRemove" hide-footer title="Exclusão de tarefa">
+      <b-modal ref="modalRemove" hide-footer title="Taskni o'chirish">
         <div class="d-block text-center">
-          <p>Deseja realmente excluir essa tarefa?</p>
-          <p>Tarefa: {{ taskSelected.subject }}</p>
+          <p>Rostdan bu taskni o'chirmoqchimisiz?</p>
+          <p>Task: {{ taskSelected.subject }}</p>
         </div>
         <div class="mt-3 d-flex justify-content-end">
-          <b-button variant="outline-secondary" class="mr-2" @click="hideModal"> Cancelar </b-button>
-          <b-button variant="outline-danger" class="mr-2" @click="confirmRemoveTask"> Excluir </b-button>
+          <b-button variant="outline-secondary" class="mr-2" @click="hideModal"> Rad etish </b-button>
+          <b-button variant="outline-danger" class="mr-2" @click="confirmRemoveTask"> O'chirish </b-button>
         </div> 
       </b-modal>
     </div>
     <div class="container mt-2 alinhar" v-else>
       <b-card class="mb-2" id="card1">
-        <b-card-text>Pô, vc ainda não criou nenhuma task....</b-card-text>
-        <b-card-text>Bora criar uma?</b-card-text>
-        <b-button variant="outline-danger" class="mr-2" to="/form">É só clicar aqui!</b-button>
+        <b-card-text>Tasklar mavjud emas!</b-card-text>
+        <b-card-text>Yaratishni xoxlaysizmi?</b-card-text>
+        <b-button class="btn" to="/form">Yangi yaratish</b-button>
       </b-card>
     </div>
 </template>
